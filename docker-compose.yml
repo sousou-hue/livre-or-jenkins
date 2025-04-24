@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    image: soumia/livre-or-jenkins:latest
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - livreor_net
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: livredor
+      MYSQL_USER: soumia
+      MYSQL_PASSWORD: soumia123
+    volumes:
+      - ./db-init:/docker-entrypoint-initdb.d
+    networks:
+      - livreor_net
+
+networks:
+  livreor_net:
+    driver: bridge
