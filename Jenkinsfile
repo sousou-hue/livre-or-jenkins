@@ -1,7 +1,8 @@
 pipeline {
   agent any
+
   environment {
-    IMAGE_NAME = "soumia/livre-or-jenkins"
+    IMAGE_NAME = "soumiael774/livre-or-jenkins"
     DOCKER_CREDENTIALS_ID = "dockerhub-credentials"
   }
 
