@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    image: soumia/livre-or-jenkins:latest
+    image: soumiael774/livre-or-jenkins:latest
     ports:
       - "8080:80"
     depends_on:
