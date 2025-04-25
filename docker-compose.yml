@@ -4,7 +4,7 @@ services:
   web:
     image: soumiael774/livre-or-jenkins:latest
     ports:
-      - "8080:80"
+      - "8085:80"
     depends_on:
       - db
     networks:
